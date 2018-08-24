@@ -43,6 +43,16 @@ class CreateForeignKeys extends Migration {
 						->onDelete('cascade')
 						->onUpdate('cascade');
 		});
+		Schema::table('roles', function(Blueprint $table) {
+			$table->foreign('employee_id')->references('id')->on('employees')
+						->onDelete('cascade')
+						->onUpdate('cascade');
+		});
+		Schema::table('tasks', function(Blueprint $table) {
+			$table->foreign('employee_id')->references('id')->on('employees')
+						->onDelete('cascade')
+						->onUpdate('cascade');
+		});
 	}
 
 	public function down()
@@ -71,5 +81,6 @@ class CreateForeignKeys extends Migration {
 		Schema::table('category_post', function(Blueprint $table) {
 			$table->dropForeign('category_post_post_id_foreign');
 		});
+		
 	}
 }

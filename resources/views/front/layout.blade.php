@@ -198,7 +198,7 @@
 
       		<div class="col-twelve">
 	      		<div class="copyright">
-		         	<span>© Copyright Abstract 2016</span>
+		         	<span>© Copyright Abstract 2018</span>
 		         	<span>Design by <a href="http://www.styleshout.com/">styleshout</a></span>
 		         </div>
 

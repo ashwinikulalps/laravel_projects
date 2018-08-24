@@ -11,35 +11,16 @@
                 @include('back.partials.boxinput', [
                     'box' => [
                         'type' => 'box-primary',
-                        'title' => __('Employee Name'),
+                        'title' => __('Role Name'),
                     ],
                     'input' => [
-                        'name' => 'employee_name',
-                        'value' => isset($employee) ? $employee->employee_name : '',
+                        'name' => 'role_name',
+                        'value' => isset($role) ? $role->role_name : '',
                         'input' => 'text',
                         'required' => true,
                     ],
                 ])
-                <div class="box box-primary">
-                    <div class="box-header with-border">
-                        <h6 class="box-title">@lang('Role')</h6>
-                        <div class="box-tools pull-right">
-                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                            </button>
-                        </div>
-                        <!-- /.box-tools -->
-                    </div>
-                    <!-- /.box-header -->
-                    <div class="box-body">
-                        <div class="form-group ">
-                        {{ Form::select('role_id',$roles,null,['class'=>'form-control'])}}
-                        
-                </div>
-
-                    </div>
-                    <!-- /.box-body -->
-                </div>
-
+                
                 @include('back.partials.boxinput', [
                     'box' => [
                         'type' => 'box-primary',
@@ -47,7 +28,7 @@
                     ],
                     'input' => [
                         'name' => 'designation',
-                        'value' => isset($employee) ? $employee->designation : '',
+                        'value' => isset($role) ? $role->designation : '',
                         'input' => 'text',
                         'required' => true,
                     ],

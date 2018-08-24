@@ -68,9 +68,7 @@
 @section('js')
     <script src="{{ asset('adminlte/js/back.js') }}"></script>
     <script>
-
         var category = (function () {
-
             var onReady = function () {
                 $('#pannel').on('click', 'td a.btn-danger', function (event) {
                     var that = $(this)
@@ -99,14 +97,10 @@
                     })
                 })
             }
-
             return {
                 onReady: onReady
             }
-
         })()
-
         $(document).ready(category.onReady)
-
     </script>
 @endsection

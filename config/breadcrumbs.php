@@ -79,5 +79,17 @@ return [
         'icon' => 'list',
         'url' => '/admin/employees',
     ],
+    'tasks' =>
+    [
+        'name' => 'tasks',
+        'icon' => 'list',
+        'url' => '/admin/tasks',
+    ],
+    'roles' =>
+    [
+        'name' => 'roles',
+        'icon' => 'list',
+        'url' => '/admin/roles',
+    ],
 
 ];

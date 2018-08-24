@@ -10,19 +10,19 @@
 @endsection
 
 @section('button')
-    <a class="btn btn-primary" href="{{ route('employees.create') }}">@lang('New Employee')</a>
+    <a class="btn btn-primary" href="{{ route('tasks.create') }}">@lang('New Task')</a>
 @endsection
 
 @section('main')
 
     <div class="row">
         <div class="col-md-12">
-            @if (session('category-ok'))
+            @if (session('task-ok'))
                 @component('back.components.alert')
                     @slot('type')
                         success
                     @endslot
-                    {!! session('category-ok') !!}
+                    {!! session('task-ok') !!}
                 @endcomponent
             @endif
             <div class="box">
@@ -34,23 +34,29 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>@lang('employee_name')</th>
-                            <th>@lang('designation')</th>
-                            <!-- <th></th>
-                            <th></th> -->
+                            <th>@lang('Task Name')</th>
+                            <th>@lang('Task Description')</th>
+                            <th>@lang('Task Assigned To')</th>
+                            <th>@lang('Task Assigned From')</th>
+                            <th>@lang('Employee ID')</th>
+                            <th></th>
+                            <th></th>
                         </tr>
                         </thead>
                         <tfoot>
                         <tr>
                             <th>#</th>
-                            <th>@lang('employee_name')</th>
-                            <th>@lang('designation')</th>
-                            <!-- <th></th>
-                            <th></th> -->
+                            <th>@lang('Task Name')</th>
+                            <th>@lang('Task Description')</th>
+                            <th>@lang('Task Assigned To')</th>
+                            <th>@lang('Task Assigned From')</th>
+                            <th>@lang('Employee ID')</th>
+                            <th></th>
+                            <th></th>
                         </tr>
                         </tfoot>
                         <tbody id="pannel">
-                            @include('back.employee.table', compact('employee'))
+                            @include('back.tasks.table', compact('tasks'))
                         </tbody>
                     </table>
                 </div>

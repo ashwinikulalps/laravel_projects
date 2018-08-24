@@ -10,19 +10,19 @@
 @endsection
 
 @section('button')
-    <a class="btn btn-primary" href="{{ route('employees.create') }}">@lang('New Employee')</a>
+    <a class="btn btn-primary" href="{{ route('roles.create') }}">@lang('New Roles')</a>
 @endsection
 
 @section('main')
 
     <div class="row">
         <div class="col-md-12">
-            @if (session('category-ok'))
+            @if (session('role-ok'))
                 @component('back.components.alert')
                     @slot('type')
                         success
                     @endslot
-                    {!! session('category-ok') !!}
+                    {!! session('role-ok') !!}
                 @endcomponent
             @endif
             <div class="box">
@@ -34,23 +34,25 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>@lang('employee_name')</th>
-                            <th>@lang('designation')</th>
-                            <!-- <th></th>
-                            <th></th> -->
+                            <th>@lang('Role')</th>
+                            <th>@lang('Designation')</th>
+                           
+                            <th></th>
+                            <th></th>
                         </tr>
                         </thead>
                         <tfoot>
                         <tr>
                             <th>#</th>
-                            <th>@lang('employee_name')</th>
-                            <th>@lang('designation')</th>
-                            <!-- <th></th>
-                            <th></th> -->
+                            <th>@lang('Role')</th>
+                            <th>@lang('Designation')</th>
+                           
+                            <th></th>
+                            <th></th>
                         </tr>
                         </tfoot>
                         <tbody id="pannel">
-                            @include('back.employee.table', compact('employee'))
+                            @include('back.roles.table', compact('role'))
                         </tbody>
                     </table>
                 </div>
@@ -66,9 +68,7 @@
 @section('js')
     <script src="{{ asset('adminlte/js/back.js') }}"></script>
     <script>
-
         var category = (function () {
-
             var onReady = function () {
                 $('#pannel').on('click', 'td a.btn-danger', function (event) {
                     var that = $(this)
@@ -97,14 +97,10 @@
                     })
                 })
             }
-
             return {
                 onReady: onReady
             }
-
         })()
-
         $(document).ready(category.onReady)
-
     </script>
 @endsection

@@ -99,8 +99,15 @@ Route::prefix('admin')->namespace('Back')->group(function () {
         Route::name('settings.edit')->get('settings', 'AdminController@settingsEdit');
         Route::name('settings.update')->put('settings', 'AdminController@settingsUpdate');
 
-         // Employees
-         Route::resource('employees', 'EmployeeController', ['except' => 'show']);
+        // Employees
+        Route::resource('employees', 'EmployeeController', ['except' => 'show']);
+
+        // Tasks
+        Route::resource('tasks', 'TaskController', ['except' => 'show']);
+
+         // Roles
+         Route::resource('roles', 'RoleController', ['except' => 'show']);
+
 
     });
 

@@ -229,6 +229,9 @@ desired effect
 
         <li><a href="{{ route('employees.index') }}"><i class="fa fa-image"></i> <span>@lang('Employees')</span></a></li>
 
+        <li><a href="{{ route('tasks.index') }}"><i class="fa fa-image"></i> <span>@lang('Tasks')</span></a></li>
+        <li><a href="{{ route('roles.index') }}"><i class="fa fa-image"></i> <span>@lang('Roles')</span></a></li>
+
       </ul>
       <!-- /.sidebar-menu -->
     </section>
@@ -272,7 +275,7 @@ desired effect
   <!-- Main Footer -->
   <footer class="main-footer">
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2017 <a href="#">@lang('My nice Company')</a>.</strong> @lang('All rights reserved').
+    <strong>Copyright &copy; 2018 <a href="#">@lang('ATC Online')</a>.</strong> @lang('All rights reserved').
   </footer>
 
 </div>

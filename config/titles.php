@@ -42,9 +42,19 @@ return [
         'edit' => 'categoryEdit',
     ],
     'employees' => [
-        'index' => 'employeeGestion',
-        'create' => 'employeeCreate',
-        'edit' => 'employeeEdit',
+        'index' => 'employeesGestion',
+        'create' => 'employeesCreate',
+        'edit' => 'employeesEdit',
+    ],
+    'tasks' => [
+        'index' => 'tasksGestion',
+        'create' => 'tasksCreate',
+        'edit' => 'tasksEdit',
+    ],
+    'roles' => [
+        'index' => 'rolesGestion',
+        'create' => 'rolesCreate',
+        'edit' => 'rolesEdit',
     ],
 
 ];

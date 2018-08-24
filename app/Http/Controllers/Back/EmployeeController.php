@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Back;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Employee;
+use App\Models\Role;
 use App\Http\Requests\EmployeeRequest;
 
 class EmployeeController extends Controller
@@ -24,13 +25,20 @@ class EmployeeController extends Controller
         return view('back.employee.index', compact ('employee'));
     }
 
+    /**
+     * Show the form for creating a new Employee.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
     public function create()
     {
-        return view('back.employee.create');
+        $roles = Role::all()->pluck('role_name', 'id');
+        return view('back.employee.create',compact ('roles'));
     }
 
      /**
-     * Store a newly created categorie in storage.
+     * Store a newly created employee in storage.
      *
      * @param  \App\Http\Requests\CategoryRequest  $request
      * @return \Illuminate\Http\Response
@@ -44,7 +52,7 @@ class EmployeeController extends Controller
 
 
     /**
-     * Show the form for editing the specified categorie.
+     * Show the form for editing the specified employee.
      *
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
@@ -55,7 +63,7 @@ class EmployeeController extends Controller
     }
 
     /**
-     * Update the specified categorie in storage.
+     * Update the specified employee in storage.
      *
      * @param  \App\Http\Requests\CategoryRequest  $request
      * @param  \App\Models\Category  $category
@@ -69,7 +77,7 @@ class EmployeeController extends Controller
     }
 
     /**
-     * Remove the specified categorie from storage.
+     * Remove the specified employee from storage.
      *
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response

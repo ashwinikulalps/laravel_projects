@@ -15,7 +15,7 @@ class EmployeeRequest extends Request
 
         return $rules = [
             'employee_name' => 'bail|required|max:255',
-            'designation' => 'bail|required|max:255' . $id,
+            'designation' => 'bail|required|max:255',
         ];
     }
 }

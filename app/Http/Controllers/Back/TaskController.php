@@ -45,7 +45,7 @@ class TaskController extends Controller
      */
     public function store(TaskRequest $request)
     { 
-        return $request;
+        // dd($request->all());
         Task::create($request->all());
         return redirect(route('tasks.index'))->with('task-ok', __('The Task has been successfully created'));
     }
@@ -60,7 +60,8 @@ class TaskController extends Controller
     public function edit(Task $task)
     {
         // dd($task);
-        return view('back.tasks.edit', compact ('task'));
+        $employees = Employee::all()->pluck('employee_name', 'id');
+        return view('back.tasks.edit', compact ('task','employees'));
     }
 
     /**

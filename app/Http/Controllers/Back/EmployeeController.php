@@ -47,7 +47,7 @@ class EmployeeController extends Controller
     {
         Employee::create($request->all());
 
-        return redirect(route('employees.index'))->with('category-ok', __('The Employee has been successfully created'));
+        return redirect(route('employees.index'))->with('employee-ok', __('The Employee has been successfully created'));
     }
 
 
@@ -59,7 +59,8 @@ class EmployeeController extends Controller
      */
     public function edit(Employee $employee)
     {
-        return view('back.employee.edit', compact ('employee'));
+        $roles = Role::all()->pluck('role_name', 'id');
+        return view('back.employee.edit', compact ('employee','roles'));
     }
 
     /**
@@ -73,7 +74,7 @@ class EmployeeController extends Controller
     {
         $employee->update($request->all());
 
-        return redirect(route('employees.index'))->with('category-ok', __('The employee has been successfully updated'));
+        return redirect(route('employees.index'))->with('employee-ok', __('The employee has been successfully updated'));
     }
 
     /**

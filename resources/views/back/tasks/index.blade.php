@@ -36,8 +36,8 @@
                             <th>#</th>
                             <th>@lang('Task Name')</th>
                             <th>@lang('Task Description')</th>
-                            <th>@lang('Task Assigned To')</th>
-                            <th>@lang('Task Assigned From')</th>
+                            <th>@lang('Task Status')</th>
+                            <th>@lang('Task Level')</th>
                             <th>@lang('Employee ID')</th>
                             <th></th>
                             <th></th>
@@ -48,8 +48,8 @@
                             <th>#</th>
                             <th>@lang('Task Name')</th>
                             <th>@lang('Task Description')</th>
-                            <th>@lang('Task Assigned To')</th>
-                            <th>@lang('Task Assigned From')</th>
+                            <th>@lang('Task Status')</th>
+                            <th>@lang('Task Level')</th>
                             <th>@lang('Employee ID')</th>
                             <th></th>
                             <th></th>

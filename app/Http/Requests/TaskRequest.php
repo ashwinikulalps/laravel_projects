@@ -18,7 +18,7 @@ class TaskRequest extends Request
             'task_description' => 'bail|required|max:255',
             'task_assigned_to' => 'bail|required|max:255',
             'task_assigned_from' => 'bail|required|max:255',
-            'employee_id' => 'bail|required' . $id,
+            'employee_id' => 'bail|required',
         ];
     }
 }

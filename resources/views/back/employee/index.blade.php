@@ -17,12 +17,12 @@
 
     <div class="row">
         <div class="col-md-12">
-            @if (session('category-ok'))
+            @if (session('employee-ok'))
                 @component('back.components.alert')
                     @slot('type')
                         success
                     @endslot
-                    {!! session('category-ok') !!}
+                    {!! session('employee-ok') !!}
                 @endcomponent
             @endif
             <div class="box">

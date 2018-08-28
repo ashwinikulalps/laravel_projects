@@ -195,28 +195,6 @@ desired effect
 
         @endadmin
 
-        @include('back.partials.treeview', [
-          'icon' => 'file-text',
-          'type' => 'post',
-          'items' => [
-            [
-              'route' => route('posts.index'),
-              'command' => 'list',
-              'color' => 'blue',
-            ],
-            [
-              'route' => route('posts.index', ['new' => 'on']),
-              'command' => 'new',
-              'color' => 'yellow',
-            ],
-            [
-              'route' => route('posts.create'),
-              'command' => 'create',
-              'color' => 'green',
-            ],
-          ],
-        ])
-
         <li><a href="{{ route('medias.index') }}"><i class="fa fa-image"></i> <span>@lang('Medias')</span></a></li>
 
         @admin
@@ -231,6 +209,24 @@ desired effect
 
         <li><a href="{{ route('tasks.index') }}"><i class="fa fa-image"></i> <span>@lang('Tasks')</span></a></li>
         <li><a href="{{ route('roles.index') }}"><i class="fa fa-image"></i> <span>@lang('Roles')</span></a></li>
+
+        @include('back.partials.treeview', [
+          'icon' => 'file-text',
+          'type' => 'tasks',
+          'items' => [
+            [
+              'route' => route('tasks.index'),
+              'command' => 'taskLevel',
+              'color' => 'blue',
+            ],
+            [
+              'route' => route('tasks.create'),
+              'command' => 'create',
+              'color' => 'green',
+            ],
+          ],
+        ])
+
 
       </ul>
       <!-- /.sidebar-menu -->

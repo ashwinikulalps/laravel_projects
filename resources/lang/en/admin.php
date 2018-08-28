@@ -57,6 +57,7 @@ return [
         'medias' => 'Medias',
         'tasks' => 'Tasks',
         'roles' => 'Roles',
+        'taskLevel' => 'Task Level',
     ],
     'new-messages' => 'New contacts !',
     'new-registers' => 'New users !',

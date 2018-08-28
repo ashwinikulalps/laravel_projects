@@ -8,6 +8,16 @@
         <div class="row">
 
             <div class="col-md-12">
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
                 @include('back.partials.boxinput', [
                     'box' => [
                         'type' => 'box-primary',
@@ -38,8 +48,8 @@
                         'title' => __('Task Status'),
                     ],
                     'input' => [
-                        'name' => 'task_assigned_from',
-                        'value' => isset($task) ? $task->task_assigned_from : '',
+                        'name' => 'task_assigned_to',
+                        'value' => isset($task) ? $task->task_assigned_to : '',
                         'input' => 'text',
                         'required' => true,
                     ],
@@ -70,7 +80,7 @@
                     <!-- /.box-header -->
                     <div class="box-body">
                         <div class="form-group ">
-                        {{ Form::select('employee_id',$employees,null,['class'=>'form-control'])}}
+                        {{ Form::select('employee_id',$employees,isset($task)?$task->employee_id:null,['class'=>'form-control'])}}
                         
                 </div>
 

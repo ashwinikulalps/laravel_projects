@@ -32,7 +32,7 @@
                     <!-- /.box-header -->
                     <div class="box-body">
                         <div class="form-group ">
-                        {{ Form::select('role_id',$roles,null,['class'=>'form-control'])}}
+                        {{ Form::select('role_id',$roles,isset($employee)?$employee->role_id:null,['class'=>'form-control'])}}
                         
                 </div>
 
